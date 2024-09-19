@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>hgfhfh</h1>
+    <div class="displey-group">
+        <h1>My Fantasy Team</h1>
+        <div class="pleayers-div">
+            <div class="PG Selected-player">fd</div>
+            <div class="SG Selected-player">fd</div>
+            <div class="SF Selected-player">fd</div>
+            <div class="PF Selected-player">fd</div>
+            <div class="C Selected-player">fd</div>
+        </div>
+        <h1>NBM Player Search</h1>
+        <main class="Search">
+            
+            <form class="Search-form">
+                <select id="Serch-player-type" required>
+                    <option value="PG">PG</option>
+                    <option value='SG'>SG</option>
+                    <option value='SF'>SF</option>
+                    <option value='PF'>PF</option>
+                    <option value='C'>C</option>
+                </select>
+                <input  type="range" min="0" max="20000" id="twoPercent" >
+                <input type="range" min="0" max="20000" id="threePercent" >
+                <input type="range" min="0" max="20000" id="points">
+                
+                
+                <button type="submit">Search Player</button>
+            </form>
+            <table id="scooter-table">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Position</th>
+                        <th>Points</th>
+                        <th>FG%</th>
+                        <th>3P%</th>
+                        <th>Action</th>                                                
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

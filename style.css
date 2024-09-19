@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+form{
+    margin: 10px auto;
+    /* padding: 10px; */
+    border-radius: 10px;
+    width: 500px;
+    /* height: 500px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 70%;
+    gap: 20px;
+    /* border: 2px solid ; */
+}
+.displey-group h1{
+    background-color: white;
+    color: blue;
+}
+.pleayers-div{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-around;
+}
+.Search{
+    background-color: rgba(128, 128, 128, 0.377);
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.Selected-player{
+    width: 15%;
+    background-color: rgba(128, 128, 128, 0.377);
+    height: 20vh;
+    border-radius: 4%;
+}
+
+select{
+    width: 90%;
+    border-radius: 8px;
+    /* border: none; */
+    padding: 8px;
+    /* background-color: rgba(0, 0, 0, 0.445); */
+    /* color: white; */
+}
+
+table{
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+
+}
+th,td{
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+    background-color: red;
+    color: white;
+
+}
