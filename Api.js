@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -8,15 +7,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const Player_1 = __importDefault(require("./Player"));
+import Player from "./Player.js";
 const BASE_URL = "https://nbaserver-q21u.onrender.com/api/filter";
-function SarchPlayer(player) {
+export default function SarchPlayer(player) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
+            console.log(`player:`);
+            console.log(player);
             const response = yield fetch(BASE_URL, {
                 method: "POST",
                 headers: {
@@ -28,17 +25,15 @@ function SarchPlayer(player) {
                 throw new Error("Cant post data");
             }
             const PlayersArr = yield response.json();
+            console.log(PlayersArr);
             return PlayersArr;
         }
         catch (error) {
             console.log(error);
         }
-        finally {
-            console.log("either we get data ot error");
-        }
     });
 }
-const Player1 = new Player_1.default('PF', 2, 4, 5);
+const Player1 = new Player('PF', 2, 4, 5);
 const displayData = (method) => __awaiter(void 0, void 0, void 0, function* () {
     const data = yield method();
     console.log(data);

@@ -1,10 +1,14 @@
-import Player from "./Player";
+import Player from "./Player.js";
+
 
 const BASE_URL: string = "https://nbaserver-q21u.onrender.com/api/filter"
 
 
-async function SarchPlayer(player: Player): Promise<Player[] | void> {
+export default async function SarchPlayer(player: Player): Promise<Player[] | void> {
     try {
+        console.log(`player:`);
+        console.log(player);
+
         const response = await fetch(BASE_URL, {
             method: "POST",
             headers: {
@@ -17,15 +21,14 @@ async function SarchPlayer(player: Player): Promise<Player[] | void> {
         if (!response.ok) {
             throw new Error("Cant post data")
         }
-        const PlayersArr: Player[] = await response.json() as Player[];
-
+        const PlayersArr: Player[] = await response.json();
+        console.log(PlayersArr);
+        
         return PlayersArr;
 
     } catch (error) {
         console.log(error);
-
-    } finally {
-        console.log("either we get data ot error");
+   
     }
 }
 
@@ -35,9 +38,9 @@ const Player1: Player = new Player(
     4,
     5,
 )
-const displayData = async (method: () => Promise<any>) => {
+ const displayData = async (method: () => Promise<any>) => {
     const data = await method();
     console.log(data);
 }
 
-displayData(()=> SarchPlayer(Player1))
+ displayData(()=> SarchPlayer(Player1))

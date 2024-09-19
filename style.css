@@ -29,6 +29,9 @@ form{
     gap: 20px;
     /* border: 2px solid ; */
 }
+form >button{
+    padding: 10px;
+}
 .displey-group h1{
     background-color: white;
     color: blue;
@@ -39,7 +42,7 @@ form{
     justify-content: space-around;
 }
 .Search{
-    background-color: rgba(128, 128, 128, 0.377);
+    background-color:  rgba(128, 128, 128, 0.144);
     width: 500px;
     margin: 0 auto;
     margin-top: 10px;
@@ -50,7 +53,7 @@ form{
 
 .Selected-player{
     width: 15%;
-    background-color: rgba(128, 128, 128, 0.377);
+    background-color: rgba(128, 128, 128, 0.144);
     height: 20vh;
     border-radius: 4%;
 }
@@ -70,11 +73,21 @@ table{
     border-collapse: collapse;
 
 }
-th,td{
+th ,td{
     border: 1px solid white;
     padding: 10px;
     text-align: center;
     background-color: red;
     color: white;
 
+}
+td{
+    border: 1px solid white;
+    background-color: rgba(128, 128, 128, 0.144);
+    color: black;
+}
+button{
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(255, 0, 0, 0.664);
 }

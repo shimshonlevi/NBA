@@ -15,7 +15,8 @@ export default class Player{
         threePercent: Number, points: Number,playerName?: String
     ){
            
-           this.playerName = playerName,
+            if (playerName)
+           {this.playerName = playerName};
            this.position = position,
            this.twoPercent = twoPercent,
            this.threePercent = threePercent,
