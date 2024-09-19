@@ -13,11 +13,11 @@ async function SarchPlayer(player: Player): Promise<Player[] | void> {
             body: JSON.stringify(player)
         });
 
-        const PlayersArr: Player[] = await response.json();
 
         if (!response.ok) {
             throw new Error("Cant post data")
         }
+        const PlayersArr: Player[] = await response.json() as Player[];
 
         return PlayersArr;
 
@@ -35,3 +35,9 @@ const Player1: Player = new Player(
     4,
     5,
 )
+const displayData = async (method: () => Promise<any>) => {
+    const data = await method();
+    console.log(data);
+}
+
+displayData(()=> SarchPlayer(Player1))
