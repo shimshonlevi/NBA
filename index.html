@@ -3,23 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fantasy NBA Team</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>hgfhfh</h1>
+    <h1>Fantasy NBA Team Manager</h1>
     <div class="displey-group">
         <h1>My Fantasy Team</h1>
         <div class="pleayers-div">
-            <div class="PG Selected-player">fd</div>
-            <div class="SG Selected-player">fd</div>
-            <div class="SF Selected-player">fd</div>
-            <div class="PF Selected-player">fd</div>
-            <div class="C Selected-player">fd</div>
+            <div class="PG Selected-player">
+                <h2>Point Guard</h2>
+            </div>
+            <div class="SG Selected-player">
+                <h2>Shooting Guard</h2>
+            </div>
+            <div class="SF Selected-player">
+                <h2>Small Forward</h2>
+            </div>
+            <div class="PF Selected-player">
+                <h2>Power Forward</h2>
+            </div>
+            <div class="C Selected-player">
+                <h2>Center</h2>
+            </div>
         </div>
-        <h1>NBM Player Search</h1>
+        <h1>NBA Player Search</h1>
         <main class="Search">
-            
             <form class="Search-form">
                 <select id="Serch-player-type" required>
                     <option value="PG">PG</option>
@@ -28,12 +37,19 @@
                     <option value='PF'>PF</option>
                     <option value='C'>C</option>
                 </select>
-                <input  type="range" min="0" max="100" id="twoPercent" >
-                <input type="range" min="0" max="100" id="threePercent" >
-                <input type="range" min="0" max="20000" id="points">
-                
-                
-                <button type="submit">Search Player</button>
+                <label>
+                    <span id="pointsDisplay">Points</span>
+                    <input type="range" min="0" max="20000" id="points">
+                </label>
+                <label>
+                    <span id="twoPercentDisplay">Field Goal %</span>
+                    <input type="range" min="0" max="100" id="twoPercent">
+                </label>
+                <label>
+                    <span id="threePercentDisplay">3-Point %</span>
+                    <input type="range" min="0" max="100" id="threePercent">
+                </label>
+                <button id="btnSearch" type="submit">Search Player</button>
             </form>
             <table id="scooter-table">
                 <thead>
@@ -43,7 +59,7 @@
                         <th>Points</th>
                         <th>FG%</th>
                         <th>3P%</th>
-                        <th>Action</th>                                                
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>

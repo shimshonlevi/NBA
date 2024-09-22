@@ -55,7 +55,9 @@ function RenderTable() {
                 twoPercent_tb.textContent = player.twoPercent;
                 const btn = document.createElement('button');
                 btn.textContent = `Add ${player.playerName}to current Tame`;
-                btn.addEventListener('click', () => { editPlayer(player); });
+                btn.addEventListener('click', () => {
+                    editPlayer();
+                });
                 const td_btn = document.createElement('td');
                 td_btn.appendChild(btn);
                 row.appendChild(playerName_tb);
@@ -70,15 +72,31 @@ function RenderTable() {
         }
     });
 }
-function editPlayer(player) {
-    const viva = document.createElement('p');
+function editPlayer() {
+    const diva = document.createElement('div');
+    const Pposition = document.createElement('p');
     const Pname = document.createElement('p');
     const PtwoPercent = document.createElement('p');
     const PthreePercent = document.createElement('p');
     const Ppoints = document.createElement('p');
-    if (player.position === 'PG')
-        PGDiv.appendChild(Pname);
-    PGDiv.appendChild(PtwoPercent);
-    PGDiv.appendChild(PthreePercent);
-    PGDiv.appendChild(PthreePercent);
+    diva.appendChild(Pposition);
+    diva.appendChild(Pname);
+    diva.appendChild(PtwoPercent);
+    diva.appendChild(PthreePercent);
+    diva.appendChild(PthreePercent);
+    if (player.position === 'PG') {
+        PGDiv.appendChild(diva);
+    }
+    else if (player.position === 'SG') {
+        PGDiv.appendChild(diva);
+    }
+    else if (player.position === 'SF') {
+        PGDiv.appendChild(diva);
+    }
+    else if (player.position === 'PF') {
+        PGDiv.appendChild(diva);
+    }
+    else if (player.position === 'C') {
+        PGDiv.appendChild(diva);
+    }
 }
